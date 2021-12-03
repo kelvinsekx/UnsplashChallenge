@@ -1,4 +1,11 @@
-# Getting Started with Create React App
+# Flexit Challenge (from create-react-app bootstrap)
+- First main commit: This is a rough sketch of work into to meet deadline extension
+- 
+ ## Todos
+ - add slight pixel implementation
+ - add notification widget
+ - implement mobile responsiveness
+ - cross check colors and spaces
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
