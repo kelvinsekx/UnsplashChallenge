@@ -12,7 +12,7 @@ import {
 
 const SideNav = () => <div className="sidenav">
     <LinkWrapper text="Home" classes="active">
-        <HomeRounded color="blue"/>
+        <HomeRounded color="rgb(56, 47, 157)"/>
     </LinkWrapper>
     <LinkWrapper text="Message">
         <Checkbox />

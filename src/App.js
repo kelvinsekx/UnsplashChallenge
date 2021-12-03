@@ -63,15 +63,15 @@ function App() {
   );
 }
 
-const Flag = ({elname})=><div className="flex flex-row  align-center justify-center" style={{gap:"0.5em", border: "1px solid #fff", backgroundColor: "white", borderRadius:'5px', width:"6rem", color: "rgb(17, 14, 186)", padding:"0.2em 0.8em", marginBottom:"4px"}}>
+const Flag = ({elname})=><div className="flex flex-row  align-center justify-center" style={{gap:"0.5em", border: "1px solid #fff", backgroundColor: "white", borderRadius:'5px', width:"6rem", color: "rgb(56, 47, 157)", padding:"0.2em 0.8em", marginBottom:"4px"}}>
   <span>{elname}</span>
-  <div className="relate-icon"><FormDown color="blue" /></div>
+  <div className="relate-icon"><FormDown color="rgb(56, 47, 157)" /></div>
 </div> 
 
 const SideNav = ()=> <div className="sidenavWrapper">
   <div className="brand">
-    <BladesHorizontal />
-    <span style={{color:"blue"}}>bluecube</span>
+    <BladesHorizontal color="rgb(56, 47, 157)"/>
+    <span>bluecube</span>
   </div>
   <SideNavLinks />
 </div>
@@ -82,7 +82,7 @@ className="flex flex-row align-center avatar">
     <div className="border-round" style={{width:'2rem', height:'2rem'}}>
       <img src={`https://images.unsplash.com/photo-1599305445671-ac291c95aaa9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=869&q=80`} alt="avatar" className="border-round" />
     </div>
-    <div className="border-round" style={{width:"0.6rem", height:"0.6rem", background:"green", position:"relative", left:"-0.5em", border:"1px solid white"}}/>
+    <div className="border-round" style={{width:"0.6rem", height:"0.6rem", background:"#28CC53", position:"relative", left:"-0.5em", border:"1px solid white"}}/>
   </div>
 
 
@@ -96,8 +96,8 @@ className="flex flex-row align-center avatar">
 </div>
 
 const Notification = ()=><div className="flex flex-row align-baseline">
-   <AiFillBell size="2rem"/>
-  <span className="flex flex-row align-center justify-center border-none pin">2</span>
+   <AiFillBell size="2rem" color="rgb(56, 47, 157)" />
+  <span className="flex flex-row align-center justify-center pin">2</span>
 </div>
 
 export default App;
