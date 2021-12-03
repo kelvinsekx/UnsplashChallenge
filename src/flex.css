@@ -1,0 +1,46 @@
+/* // flex shortcut */
+.flex{
+  display: flex;
+}
+
+/* // flex alignments */
+.align-center{
+  align-items: center;
+}
+.align-baseline{
+  align-items: baseline;
+}
+
+
+/* // flex direction*/
+.flex-column{
+  flex-direction: column;
+}
+.flex-row{
+  flex-direction: row;
+}
+
+
+/* //.flex-grow proper */
+.flex-grow{
+  flex-grow: 1;
+}
+
+/* .. justify*/
+.justify-between{
+  justify-content: space-between;
+}
+.justify-center{
+  justify-content: center;
+}
+.justify-space-around{
+  justify-content: space-around;
+}
+.justify-space-between{
+  justify-content: space-between;
+}
+
+/* // wrap */
+.wrap{
+  flex-wrap: wrap;
+}
