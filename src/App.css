@@ -1,6 +1,8 @@
 #main{
   flex-grow: 1;
-  padding: 0 3rem;
+}
+.App{
+  overflow-x: hidden;
 }
 
 .face{
@@ -9,4 +11,8 @@
   height: 16rem;
   border-radius: 5px;
   border: none;
+}
+
+.body{
+  width: 100%;
 }
