@@ -18,7 +18,13 @@ function App() {
   const [query, setQuery] = useState("");
   const [pics, setPics] = useState([]);
 
+  // tell us if error exist in fetch
+  const [error, setError] = useState(false);
+  // show error component whem it exist
+  const displayErrorWithFetchIfItExist = ()=>error && <span style={{color: 'red'}}>problem fetching...check your internet</span>
+
   const searchPhotos = async (e) => {
+    setError(false)
     e.preventDefault();
     console.log(query);
     unsplash.search
@@ -29,6 +35,12 @@ function App() {
       .then((json) => {
         console.log(json.response);
         setPics(json.response.results);
+        //clean up the query
+        setQuery('')
+      })
+      .catch(e=>{
+        console.log(e)
+        setError("there is error")
       });
   };
 
@@ -46,7 +58,7 @@ function App() {
             <SideNav />
             <div className="flex flex-column body" style={{ gap: "2rem" }}>
 
-              <div className="flex flex-row flex-grow justify-space-between wrap">
+              <div className="flex flex-row justify-space-between wrap">
                 {[
                   "World",
                   "Following",
@@ -64,9 +76,9 @@ function App() {
                 className="flex flex-row align-center wrap pixer"
                 style={{ gap: "3rem" }}
               >
-                {pics.length === 0 ? (
-                  <EmptyState />
-                ) : (
+                {displayErrorWithFetchIfItExist()}
+                {
+                pics.length === 0 ? (<EmptyState />) : (
                   pics.map((e) => <FaceCard key={e.id} photo={e} />)
                 )}
               </div>

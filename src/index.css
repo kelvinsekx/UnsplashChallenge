@@ -95,7 +95,7 @@ code {
   top: 0;
   width: 100%;
   justify-content: flex-end;
-  background-color: white;
+  background-color: var(--bg-gray);
 }
 .nav-sub{
   flex-basis: 82rem;
@@ -131,7 +131,7 @@ code {
 .button {
   background-color: var(--color-blue);
   height: 90%;
-  width: 15%;
+  width: 6rem;
   border: none;
   border-radius: 5px;
   color: white;
@@ -166,5 +166,16 @@ img {
   .face{
     width: 24rem;
     height: 25rem;
+  }
+  .navheader{
+    padding:0;
+  }
+  .nav-sub{
+    flex-direction: column;
+    align-items:flex-start;
+  }
+  .nav-sub-sub{
+    width: 100%;
+    justify-content: space-between;
   }
 }

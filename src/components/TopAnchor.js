@@ -10,7 +10,7 @@ const TopAnchor = ({ query, setQuery, searchPhotos }) => {
           <BladesHorizontal color="rgb(56, 47, 157)" />
           <span>bluecube</span>
         </div>
-        <div className="flex flex-row align-center"style={{gap:'2rem'}}>
+        <div className="flex flex-row align-center nav-sub-sub"style={{gap:'2rem'}}>
           <Search
             onChange={(e) => setQuery(e.target.value)}
             query={query}
