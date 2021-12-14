@@ -1,11 +1,18 @@
 # Flexit Challenge (from create-react-app bootstrap)
-- First main commit: This is a rough sketch of work into to meet deadline extension
-- 
+- First main commit: This is a rough sketch of work put into to meet deadline extension
+
+
+## Change is the only constant thing
+Henceforth, this project purpose will change on my side...In this case, I will be adding other functionalities like testing infra among others and generally use it as a place to play with unsplash api
+
  ## Todos
- - add slight pixel implementation
- - add notification widget
- - implement mobile responsiveness
- - cross check colors and spaces
+ - add slight pixel implementation :heavy_check_mark: 
+ - add notification widget  
+ - implement mobile responsiveness :heavy_check_mark: 
+ - cross check colors and spaces :heavy_check_mark: 
+ - add unit and infra testing to component
+ - handle state management with redux (for the fun of things)
+ - add a11y accessibility
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
