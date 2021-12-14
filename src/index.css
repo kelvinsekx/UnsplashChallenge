@@ -101,8 +101,6 @@ code {
   flex-basis: 82rem;
   justify-content: space-between;
 }
-.search-icon {
-}
 
 .border-none {
   border: none;
@@ -157,6 +155,9 @@ img {
   .face{
     width: 25.78%;
     height: 18rem;
+  }
+  .seachComp {
+    width: 18rem;
   }
 }
 @media only screen and (max-width: 560px) {

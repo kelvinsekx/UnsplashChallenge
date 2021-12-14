@@ -21,10 +21,15 @@ function App() {
   // tell us if error exist in fetch
   const [error, setError] = useState(false);
   // show error component whem it exist
-  const displayErrorWithFetchIfItExist = ()=>error && <span style={{color: 'red'}}>problem fetching...check your internet</span>
+  const displayErrorWithFetchIfItExist = () =>
+    error && (
+      <span style={{ color: "red" }}>
+        problem fetching...check your internet
+      </span>
+    );
 
   const searchPhotos = async (e) => {
-    setError(false)
+    setError(false);
     e.preventDefault();
     console.log(query);
     unsplash.search
@@ -36,11 +41,11 @@ function App() {
         console.log(json.response);
         setPics(json.response.results);
         //clean up the query
-        setQuery('')
+        setQuery("");
       })
-      .catch(e=>{
-        console.log(e)
-        setError("there is error")
+      .catch((e) => {
+        console.log(e);
+        setError("there is error");
       });
   };
 
@@ -57,8 +62,10 @@ function App() {
           <div className="flex flex-row">
             <SideNav />
             <div className="flex flex-column body" style={{ gap: "2rem" }}>
-
-              <div className="flex flex-row justify-space-between wrap">
+              <div
+                className="flex flex-row justify-space-between wrap"
+                style={{ maxHeight: "8.2rem" }}
+              >
                 {[
                   "World",
                   "Following",
@@ -77,8 +84,9 @@ function App() {
                 style={{ gap: "3rem" }}
               >
                 {displayErrorWithFetchIfItExist()}
-                {
-                pics.length === 0 ? (<EmptyState />) : (
+                {pics.length === 0 ? (
+                  <EmptyState />
+                ) : (
                   pics.map((e) => <FaceCard key={e.id} photo={e} />)
                 )}
               </div>
@@ -98,7 +106,7 @@ const Flag = ({ elname }) => (
       backgroundColor: "white",
       borderRadius: "5px",
       width: "6rem",
-      height:"2rem",      
+      height: "2rem",
       color: "rgb(56, 47, 157)",
       padding: "0.2em 0.8em",
       marginBottom: "4px",
