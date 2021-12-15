@@ -1,10 +1,9 @@
 import React from "react";
-//icons
-import { FormDown } from "grommet-icons";
 import SideNavLinks from "./components/SideNavLink";
 import EmptyState from "./components/EmptyState";
 
 import TopAnchor from "./components/TopAnchor";
+import {Flags} from './components/Flag'
 
 import { createApi } from "unsplash-js";
 import FaceCard from "./FaceCard";
@@ -48,9 +47,14 @@ function App() {
         setError("there is error");
       });
   };
+  const MainState = pics.length === 0 ? (
+    <EmptyState />
+  ) : (
+    pics.map((e) => <FaceCard key={e.id} photo={e} />)
+  )
 
   return (
-    <div className="flex flex-row App">
+    <div className="flex flex-column App">
       <div className="flex flex-column flex-grow">
         <TopAnchor
           query={query}
@@ -62,33 +66,13 @@ function App() {
           <div className="flex flex-row">
             <SideNav />
             <div className="flex flex-column body" style={{ gap: "2rem" }}>
+              <Flags />
               <div
-                className="flex flex-row justify-space-between wrap"
-                style={{ maxHeight: "8.2rem" }}
-              >
-                {[
-                  "World",
-                  "Following",
-                  "Popular",
-                  "Post",
-                  "Gender",
-                  "Location",
-                  "Profession",
-                ].map((e) => (
-                  <Flag key={e} elname={e} />
-                ))}
-              </div>
-
-              <div
-                className="flex flex-row align-center wrap pixer"
+                className="flex flex-column align-center wrap pixer"
                 style={{ gap: "3rem" }}
               >
                 {displayErrorWithFetchIfItExist()}
-                {pics.length === 0 ? (
-                  <EmptyState />
-                ) : (
-                  pics.map((e) => <FaceCard key={e.id} photo={e} />)
-                )}
+                {MainState}
               </div>
             </div>
           </div>
@@ -97,27 +81,6 @@ function App() {
     </div>
   );
 }
-
-const Flag = ({ elname }) => (
-  <div
-    className="flex flex-row  align-center justify-center"
-    style={{
-      border: "1px solid #fff",
-      backgroundColor: "white",
-      borderRadius: "5px",
-      width: "6rem",
-      height: "2rem",
-      color: "rgb(56, 47, 157)",
-      padding: "0.2em 0.8em",
-      marginBottom: "4px",
-    }}
-  >
-    <span>{elname}</span>
-    <div className="relate-icon">
-      <FormDown color="rgb(56, 47, 157)" />
-    </div>
-  </div>
-);
 
 const SideNav = () => (
   <div className="sidenavWrapper">

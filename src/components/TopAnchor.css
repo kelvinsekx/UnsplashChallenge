@@ -1,0 +1,29 @@
+.navheader {
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  justify-content: flex-end;
+  background-color: var(--bg-gray);
+}
+
+.nav-sub {
+  flex-basis: 82rem;
+  justify-content: space-between;
+}
+.nav-sub-sub {
+  width: 70%;
+}
+
+@media only screen and (max-width: 560px) {
+  .navheader {
+    padding: 0;
+  }
+  .nav-sub {
+      width: 100vw;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .nav-sub-sub {
+    width: 90%;
+  }
+}

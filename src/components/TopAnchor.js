@@ -1,4 +1,5 @@
 import Search from "./../Search";
+import './TopAnchor.css'
 import { AiFillBell } from "react-icons/ai";
 import { FormDown, BladesHorizontal } from "grommet-icons";
 
@@ -10,7 +11,7 @@ const TopAnchor = ({ query, setQuery, searchPhotos }) => {
           <BladesHorizontal color="rgb(56, 47, 157)" />
           <span>bluecube</span>
         </div>
-        <div className="flex flex-row align-center nav-sub-sub"style={{gap:'2rem'}}>
+        <div className="flex flex-row align-center justify-between nav-sub-sub ">
           <Search
             onChange={(e) => setQuery(e.target.value)}
             query={query}

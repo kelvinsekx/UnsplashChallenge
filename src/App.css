@@ -1,9 +1,7 @@
 #main{
   flex-grow: 1;
 }
-.App{
-  overflow-x: hidden;
-}
+
 
 .face{
   width: 20%;

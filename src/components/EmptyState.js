@@ -1,11 +1,11 @@
 import {AiFillBell} from "react-icons/ai"
 
 const EmptyState = () => <div className="flex flex-column flex-grow align-center justify-center"style={{height:"20rem"}}>
-    <div className="flex flex-row align-center">
+    <div className="flex flex-row align-center empty">
         <div><AiFillBell size="12rem" /></div>
-        <div className="flex flex-column"style={{fontSize:"150%"}}>
+        <div className="flex flex-column"style={{fontSize:"110%"}}>
             <span>Here is empty..</span>
-            <span>try typing into the input above and CLICK search button to see something awesome</span>
+            <span>try typing something awesome into thte input above and click search</span>
         </div>
     </div>
 </div>
