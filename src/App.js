@@ -67,11 +67,11 @@ function App() {
             <SideNav />
             <div className="flex flex-column body" style={{ gap: "2rem" }}>
               <Flags />
+              {displayErrorWithFetchIfItExist()}
               <div
-                className="flex flex-column align-center wrap pixer"
+                className="flex flex-row align-center wrap pixer"
                 style={{ gap: "3rem" }}
               >
-                {displayErrorWithFetchIfItExist()}
                 {MainState}
               </div>
             </div>
