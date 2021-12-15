@@ -1,7 +1,5 @@
 .navheader {
   padding: 1rem 0;
-  position: sticky;
-  top: 0;
   justify-content: flex-end;
   background-color: var(--bg-gray);
 }
