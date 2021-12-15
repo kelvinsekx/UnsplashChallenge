@@ -126,9 +126,10 @@ img {
 @media only screen and (max-width: 560px) {
   .pixer {
     flex-direction: column;
+    overflow-x: hidden;
   }
   .face{
-    width: 28rem;
+    width: 22rem;
     height: 25rem;
   }
 }
